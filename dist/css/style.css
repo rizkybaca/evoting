@@ -1,0 +1,14 @@
+body{
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+}
+
+aside{
+	width: 240px;
+	background-color: gray;
+}
+main{
+	flex-grow: 1;
+}

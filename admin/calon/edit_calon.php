@@ -25,11 +25,11 @@ if(isset($_GET['kode'])){
 			<input type="text" name="ini_nama" id="ini_nama" value="<?php echo $data_cek['nama_calon']; ?>">
 		</li>
 		<li>
-			<label for="ini_foto">Foto</label>
+			<label for="foto_calon">Foto</label>
 		</li>
 		<li>
 			<img width="60px" src="foto/<?=$data_cek['foto_calon'];?>"><br>
-			<input type="file" name="ini_foto" id="ini_foto">
+			<input type="file" name="foto_calon" id="foto_calon">
 			<p><font color="red">"Format file .jpg"</font></p>
 		</li>
 		<li>
@@ -66,19 +66,19 @@ if (isset ($_POST['ubah'])){
           unlink("foto/$foto");}
 
       $sql_ubah = "UPDATE tb_calon SET
-          nama_calon='".$_POST['nama_calon']."',
+          nama_calon='".$_POST['ini_nama']."',
           foto_calon='".$nama_file."',
-          visi='".$_POST['visi']."',
-          misi='".$_POST['misi']."'
-          WHERE id_calon='".$_POST['id_calon']."'";
+          visi='".$_POST['ini_visi']."',
+          misi='".$_POST['ini_misi']."'
+          WHERE id_calon='".$_POST['ini_id']."'";
       $query_ubah = mysqli_query($koneksi, $sql_ubah);
 
   }elseif(empty($sumber)){
-    $sql_ubah = "UPDATE tb_calon SET
-        nama_calon='".$_POST['nama_calon']."',
-        visi='".$_POST['visi']."',
-        misi='".$_POST['misi']."'
-        WHERE id_calon='".$_POST['id_calon']."'";
+    $sql_ubah = "UPDATE tb_calon SET 
+        nama_calon='".$_POST['ini_nama']."',
+        visi='".$_POST['ini_visi']."',
+        misi='".$_POST['ini_misi']."'
+        WHERE id_calon='".$_POST['ini_id']."'";
     $query_ubah = mysqli_query($koneksi, $sql_ubah);
   }
 

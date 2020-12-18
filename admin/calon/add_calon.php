@@ -61,18 +61,18 @@ function upload(){
   $ekstensiFoto=strtolower(end($ekstensiFoto));
 
   if (in_array($ekstensiFoto, $ekstensiValid)) {
-  	echo "
-  		<script>
-				alert('Gagal, silakan unggah foto sesuai ekstensi!');
-				document.location.href = 'index.php?page=add-calon';
-			</script>
-		";
-  }
-
-  if ($ukuranFile>2000000) {
+  	if ($ukuranFile>2000000) {
   	echo "
   		<script>
 				alert('Gagal, ukuran foto terlalu besar!');
+				document.location.href = 'index.php?page=add-calon';
+			</script>
+		";
+  	}
+  } else {
+  	echo "
+  		<script>
+				alert('Gagal, silakan unggah foto sesuai ekstensi!');
 				document.location.href = 'index.php?page=add-calon';
 			</script>
 		";

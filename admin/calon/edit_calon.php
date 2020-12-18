@@ -28,7 +28,7 @@ if(isset($_GET['kode'])){
 			<label for="ini_foto">Foto</label>
 		</li>
 		<li>
-			<img width="40px" src="foto/<?= $data_cek['foto']; ?>">
+			<img width="60px" src="foto/<?=$data_cek['foto_calon'];?>"><br>
 			<input type="file" name="ini_foto" id="ini_foto">
 			<p><font color="red">"Format file .jpg"</font></p>
 		</li>

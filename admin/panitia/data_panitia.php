@@ -32,7 +32,7 @@
 					<?php echo $data['level']; ?>
 				</td>
 				<td>
-					<a href="?page=edit-pengguna&kode=<?php echo $data['id_pengguna']; ?>">Edit</a>
+					<a href="?page=edit-panitia&kode=<?php echo $data['id_pengguna']; ?>">Edit</a>
 					<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="?page=del-panitia&kode=<?php echo $data['id_pengguna']; ?>">Hapus</a>
 				</td>
 			</tr>

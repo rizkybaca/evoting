@@ -24,6 +24,15 @@ if (isset($_POST['btnLogin'])) {
 		$_SESSION["ses_status"]=$data_login["status"];
 		$_SESSION["ses_jenis"]=$data_login["jenis"];
 
+	// cek dashboard admin atau user
+	if ($_SESSION["ses_level"]=="Pemilih") {
+		echo "
+			<script>
+				alert('berhasil login!');
+				document.location.href = 'index1.php';
+			</script>
+		";
+	} elseif ($_SESSION["ses_level"]=="Administrator" || $_SESSION["ses_level"]=="Panitia"){
 		echo "
 			<script>
 				alert('berhasil login!');
@@ -38,6 +47,7 @@ if (isset($_POST['btnLogin'])) {
 				</script>
 			";
 		}
+	}
 }
 
  ?>

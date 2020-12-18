@@ -69,15 +69,6 @@ if(isset($_GET["page"])){
 				<a href="?page=data-suara">Quick Count</a>
 			</li>
 		<?php 
-		} elseif ($data_level=="Pemilih")
-		{ ?>
-			<li>
-				<a href="index.php">Home</a>
-			</li>
-			<li>
-				<a href="?page=data-suara">Quick Count</a>
-			</li>
-		<?php 
 		} ?>
 		<li>
 			<a onclick="return confirm('Apakah Anda yakin akan keluar?')" href="logout.php"><p>Logout</p></a>
@@ -96,9 +87,9 @@ if(isset($_GET["page"])){
 				case 'panitia':
 					include "home/panitia.php";
 					break;
-				case 'pemilih':
-					include "home/pemilih.php";
-					break;
+				// case 'pemilih':
+				// 	include "home/pemilih.php";
+				// 	break;
 
 					//manage data panitia
 				case 'data-panitia':
@@ -172,10 +163,11 @@ if(isset($_GET["page"])){
 				include "home/admin.php";
 			} elseif ($data_level=="Panitia"){
 				include "home/admin.php";
-			} elseif ($data_level=="Pemilih"){
-				include "home/pemilih.php";
-			}
+			// } elseif ($data_level=="Pemilih"){
+			// 	include "home/pemilih.php";
+			// }
 		}
+	}
 		 ?>
 	</main>
 </body>

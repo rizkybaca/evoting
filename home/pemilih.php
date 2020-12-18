@@ -1,1 +1,4 @@
-<h1>ini halaman pemilih</h1>
+<?php 
+
+include "pemilih/calon/data_calon.php";
+ ?>

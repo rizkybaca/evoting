@@ -28,6 +28,7 @@ if(isset($_GET["page"])){
 <head>
 	<title>nge-Vote</title>
 	<link rel="stylesheet" type="text/css" href="./dist/css/style1.css">
+	<script type="text/javascript" src="./dist/js/Chart.js"></script>
 </head>
 <body>
 	<nav>

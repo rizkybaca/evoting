@@ -12,7 +12,7 @@
 	<tbody>
 		<?php 
 		$no=1;
-		$sql = $koneksi->query("SELECT * FROM tb_vote
+		$sql = $koneksi->query("SELECT tb_calon.nama_calon, tb_vote.id_pemilih, tb_vote.waktu FROM tb_vote
 				JOIN tb_calon ON tb_vote.id_calon=tb_calon.id_calon
 				JOIN tb_pengguna ON tb_vote.id_pemilih=tb_pengguna.id_pengguna
 			");

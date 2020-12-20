@@ -1,0 +1,48 @@
+// voting style
+main#voting 
+   section 
+      @include dimension(1226px, 500px)
+      display: flex
+      justify-content: space-between
+      padding: 50px
+      .profile
+         @include font(18px, 400)
+         color: $black
+         display: flex
+         flex-direction: column
+         justify-content: space-between
+         .text 
+            div 
+               margin-bottom: 30px
+            .visi 
+               margin-bottom: 60px
+         .btn
+            border-radius: 10px
+            display: flex
+            justify-items: flex-end
+            a 
+               text-decoration: none
+               color: $black
+               padding: 15px 60px
+               display: block
+               border-radius: 10px
+               &.kembali
+                  margin-right: 180px 
+                  border: 1px solid $red
+                  color: $red
+                  &:hover
+                     background-color: $red
+                     color: $white
+                     transition: .3s
+               &.coblos
+                  background-color: $green
+                  color: $white
+      .img 
+         @include dimension(400px, 400px)
+         align-self: center
+         overflow: hidden
+         border-radius: 10px
+         filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25))
+         img 
+            position: relative
+            @include dimension(100%, 100%)

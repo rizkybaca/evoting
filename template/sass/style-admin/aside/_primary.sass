@@ -1,0 +1,63 @@
+aside
+   width: 240px
+   padding: 34px 0
+   display: flex
+   flex-direction: column
+   align-items: center
+   background-color: $darkes
+   color: $white
+   font-size: 18px
+   text-align: center
+   .admin
+      margin-bottom: 56px
+      img
+         @include dimension(110px, 110px)
+         border-radius: 100px
+         margin-bottom: 22px 
+         overflow: hidden
+         border: 2px $white solid
+      .name
+         margin-bottom: 13px
+      .status
+         color: $black
+   .navbar
+      // width: 150px
+      flex: 1
+      text-align: left
+      a
+         margin-bottom: 30px  
+         text-decoration: none
+         color: $white-8
+         display: block
+         &:hover
+            color: white
+      .user-btn
+         margin-bottom: 30px
+         cursor: pointer
+         color:  $white-8
+         &:hover
+            color: white
+      .user-data 
+         // overflow: hidden
+         .user-box
+            display: none
+            &.block
+               display: block
+
+         a 
+            display: block
+      .user-btn
+
+   .logout
+      font-size: 22px
+      margin-bottom: 40px
+      padding: 4px 32px
+      background-color: $white
+      border-radius: 10px
+      color: $red
+      text-decoration: none
+      &:hover
+         background-color: crimson
+         color: white
+         border: 2px solid red
+

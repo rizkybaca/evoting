@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="sass/style-admin/dist/style.css">
+   <title>Document</title>
+</head>
+
+<body>
+   <aside>
+      <div class="admin">
+         <img src="img/admin_3.jpg" alt="">
+         <div class="name">Hello Admin</div>
+         <div class="status">Admisitrator</div>
+      </div>
+      <div class="navbar">
+         <a href="home-admin.html">home</a>
+         <!-- <div class="user-btn"><a href="" >User data</a></div>  BAJINGAN!!!!!-->
+         <div class="user-btn">User data</div>
+         <div class="user-data">
+            <div id="box" class="user-box">
+               <a href="management-data-kandidat-admin.html">Kandidat</a>
+               <a href="management-data-pemilih-admin.html">Pemilih</a>
+               <a href="management-data-panitia-admin.html">Panitia</a>
+            </div>
+         </div>
+         <a href="vote-box-admin.html">Vote Box</a>
+         <a href="quick-count-admin.html">Quick Count</a>
+      </div>
+      <a href="#" class="logout">Log Out</a>
+   </aside>
+
+   <div class="content">
+      <nav>
+         <img src="img/logo.svg" alt="">
+         <div>nge-Vote</div>
+      </nav>
+
+      <main id="home-admin">
+         <div class="title">Home-Page</div>
+         <div class="datas">
+            <div class="data data-pemilih">
+               <h2>Overview</h2>
+               <div class="num text-lime">2</div>
+               <div class="text">Jumlah Keseluruhan Pemilih yang Terdaftar</div>
+            </div>
+            <div class="data data-kandidat">
+               <h2>Overview</h2>
+               <div class="num text-cobalt">2</div>
+               <div class="text">Jumlah Kandidat yang Terdaftar</div>
+            </div>
+            <div class="data data-sudah-mencoblos">
+               <h2>Overview</h2>
+               <div class="num text-violet">103</div>
+               <div class="text">Jumlah Pemilih yang sudah Mencoblos</div>
+            </div>
+            <div class="data data-belum-mencoblos">
+               <h2>Overview</h2>
+               <div class="num text-berry">1</div>
+               <div class="text">Jumlah Peserta yang belum Mencoblos</div>
+            </div>
+         </div>
+      </main>
+   
+      <footer>
+         <div>Nge-Vote | 2020 | all right reserved</div>
+      </footer>
+   </div>
+
+   <script src="js/script.js"></script>
+</body>
+
+</html>

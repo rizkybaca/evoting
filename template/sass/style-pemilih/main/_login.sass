@@ -1,0 +1,35 @@
+main#login
+   background-color: $white
+   section
+      text-align: center
+      h1 
+         @include font(48px, 500)
+         margin-bottom: 95px
+      .username, .password 
+         text-align: left
+         @include font(18px, 400)
+         input 
+            @include dimension(450px, 45px)
+            margin-bottom: 8px
+            padding: 10px
+            border: 1px solid black
+            background-color: $grey
+            border-radius: 9px
+            outline: none
+         div 
+            margin-bottom: 8px
+      input[type=submit]
+         margin-top: 73px
+         padding: 9px 45px
+         background-color: $jade
+         border-radius: 10px
+         border: none
+         color: white
+         @include font(24px, 400)
+         opacity: .8
+         cursor: pointer
+         outline: none
+         &:hover
+            opacity: 1
+         &:active
+            opacity: .8

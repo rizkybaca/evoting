@@ -1,0 +1,51 @@
+main
+   flex-grow: 1
+   background-color: $grey
+   padding: 45px 30px
+   .space-between
+      display: flex
+      justify-content: space-between
+      a
+         padding: 4px 32px
+         background-color: $red
+         text-decoration: none
+         color: $white
+         font-size: 22px
+         display: block
+         border-radius: 10px
+   .title 
+      margin-bottom: 45px
+   .table
+      padding: 24px 20px 44px 20px
+      border-radius: 10px
+      background-color: $white
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .25)
+      baris
+         padding: 20px 0
+         display: flex
+         border-bottom: 1px solid black
+         kolom
+            display: flex
+            flex: 1
+            align-items: center
+            img
+               width: 161px
+               height: 121px
+               border-radius: 10px
+               box-shadow: 0px 2px 4px rgba(0, 0, 0, .25)
+            a 
+               margin-right: 20px
+            .status 
+               padding: 7px
+               border-radius: 10px
+            .sudah-memilih
+               background-color: $emerald
+               color: $white
+            .belum-memilih
+               background-color: $lime
+            &.num
+               font-size: 48px
+            &.no-urut
+               flex: none
+               width: 180px
+

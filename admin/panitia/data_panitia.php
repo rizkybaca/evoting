@@ -32,8 +32,12 @@
 					<?php echo $data['level']; ?>
 				</td>
 				<td>
-					<a href="?page=edit-panitia&kode=<?php echo $data['id_pengguna']; ?>">Edit</a>
-					<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="?page=del-panitia&kode=<?php echo $data['id_pengguna']; ?>">Hapus</a>
+					<?php if ($data_jenis=='ADM') { ?>
+						<a href="?page=edit-panitia&kode=<?php echo $data['id_pengguna']; ?>">Edit</a>
+						<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="?page=del-panitia&kode=<?php echo $data['id_pengguna']; ?>">Hapus</a>
+					<?php } elseif ($data_jenis=='PAN') { ?>
+						Tidak tersedia
+					<?php } ?>
 				</td>
 			</tr>
 		<?php

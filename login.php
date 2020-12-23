@@ -39,14 +39,14 @@ if (isset($_POST['btnLogin'])) {
 				document.location.href = 'index.php';
 			</script>
 		";
-		} else{
+	}
+	} else{
 			echo "
 				<script>
 					alert('gagal login!');
 					document.location.href = 'login.php';
 				</script>
 			";
-		}
 	}
 }
 

@@ -1,5 +1,9 @@
 <?php 
+
+$calon=mysqli_query($koneksi, "SELECT nama_calon FROM tb_calon ORDER BY id_vote ASC");
+$suara=mysqli_query($koneksi, "SELECT COUNT(id_vote) FROM tb_calon WHERE id_calon ORDER BY id_vote ASC");
 ?>
+
 <h3>Quick Count</h3>
 <br>
 <br>
@@ -11,10 +15,10 @@
 		var myChart = new Chart(ctx, {
 			type: 'doughnut',
 			data: {
-				labels: ["Rifqi", "Awalif"],
+				labels: [<?php while ($p=mysqli_fetch_array($calon)){ echo '"'.$p['nama_calon'].'",';}?>],
 				datasets: [{
 					label: '# of Votes',
-					data: [26,50],
+					data: <?php while ($p=mysqli_fetch_array($suara)){ echo '"'.$p['suara'].'",';}?>],
 					backgroundColor: [
 					'rgba(255, 99, 132, 0.2)',
 					'rgba(54, 162, 235, 0.2)'

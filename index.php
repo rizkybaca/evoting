@@ -87,9 +87,6 @@ if(isset($_GET["page"])){
 				case 'panitia':
 					include "home/panitia.php";
 					break;
-				// case 'pemilih':
-				// 	include "home/pemilih.php";
-				// 	break;
 
 					//manage data panitia
 				case 'data-panitia':
@@ -163,9 +160,6 @@ if(isset($_GET["page"])){
 				include "home/admin.php";
 			} elseif ($data_level=="Panitia"){
 				include "home/admin.php";
-			// } elseif ($data_level=="Pemilih"){
-			// 	include "home/pemilih.php";
-			// }
 		}
 	}
 		 ?>

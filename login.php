@@ -53,30 +53,33 @@ if (isset($_POST['btnLogin'])) {
  ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>ngevote | login</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./dist/css/style2.css">
+   <title>Document</title>
 </head>
 <body>
-	<h3>Silakan masuk dengan akun anda</h3>
-	<form action="" method="POST">
-		<ul>
-			<li>
-				<label for="username">Username</label>
-			</li>
-			<li>
-				<input type="text" name="username" id="username" required>
-			</li>
-			<li>
-				<label for="password">Password</label>
-			</li>
-			<li>
-				<input type="password" name="password" id="password" required>
-			</li>
-			<li>
-				<button type="submit" name="btnLogin">Masuk</button>
-			</li>					
-		</ul>		
-	</form>
+   <main id="login">
+      <section>
+         <h1>Selamat Datang</h1>
+            <form action="" method="POST">
+            <div class="username">
+               <div>username</div>
+               <input type="text" name="username">
+            </div>
+            <div class="password">
+               <div for="">password</div>
+               <input type="password" name="password">
+            </div>
+            <input type="submit" name="btnLogin" value="Login">
+         </form>
+      </section>
+   </main>
+
+   <footer id="login">
+      <div>Nge-Vote  |  2020  |  all right reserved</div>
+   </footer>
 </body>
 </html>

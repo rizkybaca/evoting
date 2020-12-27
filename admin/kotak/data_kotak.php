@@ -1,16 +1,15 @@
-<h3>Kotak Suara</h3>
-<br>
-<table border="1" style="border-collapse: collapse;">
-	<thead>
-		<tr>
-			<th>No</th>
-			<th>Kandidat</th>
-			<th>Pemilih</th>
-			<th>Waktu Memilih</th>
-		</tr>
-	</thead>
-	<tbody>
-		<?php 
+<div class="title">Vote Box-Page</div>
+<div class="table">
+  <thead"> 
+		<baris>
+		  <kolom>Nomor</kolom>
+		  <kolom>Nama Kandidat</kolom>
+		  <kolom>ID Pemilih</kolom>
+		  <kolom>Waktu Memilih</kolom>
+		</baris>
+  </thead>
+  <tbody>
+  	<?php 
 		$no=1;
 		$sql = $koneksi->query("SELECT tb_calon.nama_calon, tb_vote.id_pemilih, tb_vote.waktu FROM tb_vote
 				JOIN tb_calon ON tb_vote.id_calon=tb_calon.id_calon
@@ -18,21 +17,12 @@
 			");
 		while($data=$sql->fetch_assoc()) {
 		 ?>
-			<tr>
-				<td>
-					<?php echo $no++; ?>
-				</td>
-				<td>
-					<?php echo $data['nama_calon']; ?>
-				</td>
-				<td>
-					<?php echo $data['id_pemilih']; ?>
-				</td>
-				<td>
-					<?php echo $data['waktu']; ?>
-				</td>
-			</tr>
-		<?php 
-		} ?>
-	</tbody>
-</table>
+			<baris>
+			  <kolom><?php echo $no++; ?></kolom>
+			  <kolom><?php echo $data['nama_calon']; ?></kolom>
+			  <kolom><?php echo $data['id_pemilih']; ?></kolom>
+			  <kolom><?php echo $data['waktu']; ?></kolom>
+			</baris>
+		<?php } ?>
+  </tbody>
+</div>

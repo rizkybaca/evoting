@@ -57,7 +57,7 @@ if(isset($_GET["page"])){
     <?php 
     }elseif($data_level == "Panitia"){ ?>
       <div class="navbar">
-      <a href="index.php">home</a>
+      <a href="index.php">Home</a>
       <a href="?page=data-kotak">Vote Box</a>
       <a href="?page=data-suara">Quick Count</a>
       <div class="user-btn">--manage data--</div>

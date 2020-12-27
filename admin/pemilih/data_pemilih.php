@@ -1,47 +1,57 @@
-<h3>Data Panitia</h3>
-<a href="?page=add-pemilih">Tambah data</a>
-<br>
-<br>
-<table border="1" style="border-collapse: collapse;">
-	<thead>
-		<tr>
-			<th width="10%">No.</th>
-			<th width="23%">Nama Pemilih</th>
-			<th width="23%">Username Akun</th>
-			<th width="23%">Status</th>
-			<th width="10%">Aksi</th>
-		</tr>
-	</thead>
-	<tbody>
-		<?php 
+<div class="space-between">
+  <?php if ($data_jenis=='PAN') { ?>
+		<div class="title">Manage Data-Pemilih</div>
+		<div class="btn-add-data">
+		   <a href="?page=add-pemilih">Add Data</a>
+		</div>
+	<?php } elseif ($data_jenis=='ADM') {?>
+		<div class="title">Manage Data-Pemilih</div>
+	<?php } ?>
+</div>
+<div class="table">
+  <thead"> 
+     <baris>
+        <kolom class="no-urut">Nomor Urut</kolom>
+        <kolom>Nama</kolom>
+        <kolom>Username</kolom>
+        <kolom>Status</kolom>
+        <kolom>Aksi</kolom>
+     </baris>
+  </thead>
+  <tbody>
+  	<?php 
 		$no=1;
 		$sql = $koneksi->query("SELECT * FROM tb_pengguna WHERE jenis='PST'");
-		while ($data= $sql->fetch_assoc()){
-		 ?>
-			<tr>
-				<td>
-					<?php echo $no++; ?>
-				</td>
-				<td>
-					<?php echo $data['nama_pengguna']; ?>
-				</td>
-				<td>
-					<?php echo $data['username']; ?>
-				</td>
-				<td>
-					<?php $stt=$data['status'];
+		while ($data= $sql->fetch_assoc()){ ?>
+     <baris>
+        <kolom class="no-urut"><?php echo $no++; ?></kolom>
+        <kolom><?php echo $data['nama_pengguna']; ?></kolom>
+        <kolom><?php echo $data['username']; ?></kolom>
+        <kolom>
+        	<?php $stt=$data['status'];
 					if ($stt=='1'){ ?>
-						Belum memilih
+						<div class="status belum-memilih">
+        			Belum Memilih
+        		</div>
 					<?php } elseif ($stt=='0'){ ?>
-						Sudah memilih
+						<div class="status sudah-memilih">
+        			Sudah Memilih
+        		</div>
 					<?php } ?>
-				</td>
-				<td>
-					<a href="?page=edit-pemilih&kode=<?php echo $data['id_pengguna']; ?>">Edit</a>
-					<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="?page=del-pemilih&kode=<?php echo $data['id_pengguna']; ?>">Hapus</a>
-				</td>
-			</tr>
-		<?php
-		} ?>
-	</tbody>
-</table>
+        </kolom>
+        <kolom>
+        	<?php if ($data_jenis=='PAN') { ?>
+						<a href="?page=edit-pemilih&kode=<?php echo $data['id_pengguna']; ?>">
+							<img class="icon-aksi" src="./dist/img/edit.svg">
+						</a>
+						<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="?page=del-pemilih&kode=<?php echo $data['id_pengguna']; ?>">
+							<img class="icon-aksi" src="./dist/img/delete.svg">
+						</a>
+					<?php } elseif ($data_jenis=='ADM') { ?>
+						-
+					<?php } ?>
+        </kolom>
+     </baris>
+    <?php } ?>
+  </tbody>
+</div>

@@ -126,12 +126,17 @@ main .space-between {
 }
 main .space-between a {
   padding: 4px 32px;
-  background-color: #FF0000;
+  background-color: #2ec4b6;
   text-decoration: none;
-  color: #FDFDFF;
+  color: #fdfffc;
   font-size: 22px;
   display: block;
   border-radius: 10px;
+}
+main .space-between a:hover{
+  background-color: #fdfffc;
+  color: #2ec4b6;
+  border: 2px solid #fdfffc;;
 }
 main .title {
   margin-bottom: 45px;
@@ -152,11 +157,15 @@ main .table baris kolom {
   flex: 1;
   align-items: center;
 }
-main .table baris kolom img {
+main .table baris kolom .foto {
   width: 161px;
   height: 121px;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+main .table baris kolom .icon-aksi {
+  width: 24px;
+  height: 24px;
 }
 main .table baris kolom a {
   margin-right: 20px;

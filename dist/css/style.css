@@ -7,7 +7,7 @@ body{
 
 aside{
 	width: 240px;
-	background-color: gray;
+	background-color: #011627;
 }
 main{
 	flex-grow: 1;

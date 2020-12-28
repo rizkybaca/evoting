@@ -1,14 +1,591 @@
-body{
-	margin: 0;
-	height: 100vh;
-	display: flex;
-	flex-direction: row;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700;1,900&display=swap");
+.text-violet {
+  color: #4B26C2;
 }
 
-aside{
-	width: 240px;
-	background-color: #011627;
+.text-cobalt {
+  color: #2664C2;
 }
-main{
-	flex-grow: 1;
+
+.text-lime {
+  color: #58D92A;
+}
+
+.text-berry {
+  color: #C13B23;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  height: 55px;
+  display: flex;
+}
+nav .container {
+  width: 1426px;
+  display: flex;
+  margin: auto;
+  padding: 0 20px;
+  background-color: #FDFDFF;
+  justify-content: space-between;
+}
+nav .container .logo {
+  display: flex;
+  align-items: center;
+}
+nav .container .logo div {
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 16px;
+}
+nav .container .navbar {
+  display: flex;
+  align-items: center;
+}
+nav .container .navbar a {
+  margin-right: 25px;
+  color: #484A5B;
+  text-decoration: none;
+}
+nav .container .navbar div {
+  padding: 5px 7px;
+  border: 1px solid #484A5B;
+  border-radius: 10px;
+}
+
+main {
+  flex-grow: 1;
+  background-color: #E7E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+main#home {
+  flex-grow: 1;
+  background-color: #E7E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main#home .kandidat {
+  width: 400px;
+  height: 500px;
+  background-color: #FDFDFF;
+  margin: 0 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 31px 51px 0 51px;
+  text-align: center;
+}
+main#home .kandidat img {
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
+  margin-bottom: 27px;
+}
+main#home .kandidat .no-kandidat {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+main#home .kandidat a {
+  color: #484A5B;
+}
+
+main#thanks section {
+  width: 1226px;
+  height: 500px;
+  display: flex;
+}
+main#thanks section div {
+  width: 800px;
+  height: 103px;
+  margin: auto;
+  display: flex;
+  border: 1px solid #059D0B;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 48px;
+  font-weight: 400;
+}
+main#thanks section div span {
+  margin: auto;
+}
+
+main#voting section {
+  width: 1226px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+main#voting section .profile {
+  font-size: 18px;
+  font-weight: 400;
+  color: #484A5B;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main#voting section .profile .text div {
+  margin-bottom: 30px;
+}
+main#voting section .profile .text .visi {
+  margin-bottom: 60px;
+}
+main#voting section .profile .btn {
+  border-radius: 10px;
+  display: flex;
+  justify-items: flex-end;
+}
+main#voting section .profile .btn a {
+  text-decoration: none;
+  color: #484A5B;
+  padding: 15px 60px;
+  display: block;
+  border-radius: 10px;
+}
+main#voting section .profile .btn a.kembali {
+  margin-right: 180px;
+  border: 1px solid #FF0000;
+  color: #FF0000;
+}
+main#voting section .profile .btn a.kembali:hover {
+  background-color: #FF0000;
+  color: #FDFDFF;
+  transition: 0.3s;
+}
+main#voting section .profile .btn a.coblos {
+  background-color: #059D0B;
+  color: #FDFDFF;
+}
+main#voting section .img {
+  width: 400px;
+  height: 400px;
+  align-self: center;
+  overflow: hidden;
+  border-radius: 10px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+main#voting section .img img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+main#login {
+  background-color: #FDFDFF;
+}
+main#login section {
+  text-align: center;
+/*  width: 1200px;*/
+}
+main#login section h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 95px;
+}
+main#login section .username, main#login section .password {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+}
+main#login section .username input, main#login section .password input {
+  width: 450px;
+  height: 45px;
+  margin-bottom: 8px;
+  padding: 10px;
+  border: 1px solid #E7E7EB;
+  background-color: #E7E7EB;
+  border-radius: 9px;
+  outline: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+}
+main#login section .username div, main#login section .password div {
+  margin-bottom: 8px;
+}
+main#login section input[type=submit] {
+  margin-top: 73px;
+  padding: 9px 45px;
+  background-color: #2ec4b6;
+  border-radius: 10px;
+  border: none;
+  color: #fdfffc;
+  font-size: 24px;
+  font-weight: 400;
+  opacity: 0.8;
+  cursor: pointer;
+  outline: none;
+}
+main#login section input[type=submit]:hover {
+  opacity: 1;
+}
+main#login section input[type=submit]:active {
+  opacity: 0.8;
+}
+
+main#add-data section {
+  width: 1226px;
+  height: 600px;
+  padding: 30px;
+  background-color: #FDFDFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+main#add-data section form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main#add-data section form .input {
+  display: flex;
+  flex-direction: column;
+  color: #484A5B;
+}
+main#add-data section form .input label {
+  font-size: 18px;
+}
+main#add-data section form .input input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  background-color: #FDFDFF;
+}
+main#add-data section form .input input::placeholder {
+  color: #484A5B;
+  opacity: 0.5;
+}
+main#add-data section form .input input:focus {
+  border-bottom: 1px solid black;
+}
+main#add-data section form .input input:focus::placeholder {
+  opacity: 0;
+}
+main#add-data section form .input input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+main#add-data section form .input .upload-img {
+  display: flex;
+}
+main#add-data section form .input .upload-img .upload {
+  margin-right: 10px;
+}
+main#add-data section form .input .upload-img .upload label {
+  display: block;
+}
+main#add-data section form .input .upload-img .upload input {
+  width: 500px;
+}
+main#add-data section form .input .upload-img img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+main#add-data section form .btn {
+  display: flex;
+  justify-content: space-between;
+}
+main#add-data section form .btn a {
+  text-decoration: none;
+  color: #FF0000;
+  border: 1px solid #FF0000;
+  padding: 15px 65px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+main#add-data section form .btn a:hover {
+  background-color: #FF0000;
+  color: #FDFDFF;
+}
+main#add-data section form .btn input[type=submit] {
+  background-color: #059D0B;
+  border: none;
+  padding: 15px 65px;
+  color: #FDFDFF;
+  border-radius: 10px;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+}
+
+footer {
+  height: 55px;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+}
+footer .container {
+  width: 1426px;
+  display: flex;
+  margin: auto;
+  padding: 0 20px;
+  background-color: #FDFDFF;
+  background-color: #FDFDFF;
+}
+
+footer#login {
+  display: flex;
+  height: 85px;
+  background-color: #E7E7EB;
+}
+footer#login div {
+  margin: auto;
+}
+
+@media screen and (max-width: 570px) {
+  main {
+    flex-direction: column;
+  }
+  main .kandidat {
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700;1,900&display=swap");
+.text-violet {
+  color: #4B26C2;
+}
+
+.text-cobalt {
+  color: #2664C2;
+}
+
+.text-lime {
+  color: #58D92A;
+}
+
+.text-berry {
+  color: #C13B23;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+aside {
+  width: 240px;
+  padding: 34px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #011627;
+  color: #FDFDFF;
+  font-size: 18px;
+  text-align: center;
+}
+aside .admin {
+  margin-bottom: 56px;
+}
+aside .admin img {
+  width: 110px;
+  height: 110px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  border: 2px #FDFDFF solid;
+  background-color: #fff;
+}
+aside .admin .name {
+  margin-bottom: 13px;
+}
+aside .admin .status {
+  color: #484A5B;
+}
+aside .navbar {
+  flex: 1;
+  text-align: left;
+}
+aside .navbar a {
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+}
+aside .navbar a:hover {
+  color: white;
+}
+aside .navbar .user-btn {
+  margin-bottom: 10px;
+/*  cursor: pointer;*/
+  color: #8d99ae;
+  font-size: 12px;
+
+}
+aside .navbar .user-data .user-box.block {
+  display: block;
+}
+aside .navbar .user-data a {
+  display: block;
+}
+aside .logout {
+  font-size: 22px;
+  margin-bottom: 40px;
+  padding: 4px 32px;
+  background-color: #fdfffc;
+  border-radius: 10px;
+  color: #e71d36;
+  text-decoration: none;
+}
+aside .logout:hover {
+  background-color: crimson;
+  color: #fdfffc;
+  border: 2px solid #e71d36;
+}
+
+nav {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+}
+nav img {
+  margin-right: 14px;
+  width: 16px;
+  height: 16px;
+}
+
+main {
+  flex-grow: 1;
+  background-color: #E7E7EB;
+  padding: 45px 30px;
+}
+main .space-between {
+  display: flex;
+  justify-content: space-between;
+}
+main .space-between a {
+  padding: 4px 32px;
+  background-color: #2ec4b6;
+  text-decoration: none;
+  color: #fdfffc;
+  font-size: 22px;
+  display: block;
+  border-radius: 10px;
+}
+main .space-between a:hover{
+  background-color: #fdfffc;
+  color: #2ec4b6;
+  border: 2px solid #fdfffc;;
+}
+main .title {
+  margin-bottom: 45px;
+}
+main .table {
+  padding: 24px 20px 44px 20px;
+  border-radius: 10px;
+  background-color: #fdfffc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+main .table baris {
+  padding: 20px 0;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+main .table baris kolom {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+main .table baris kolom .foto {
+  width: 161px;
+  height: 121px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+main .table baris kolom .icon-aksi {
+  width: 24px;
+  height: 24px;
+}
+main .table baris kolom a {
+  margin-right: 20px;
+}
+main .table baris kolom .status {
+  padding: 7px;
+  border-radius: 10px;
+}
+main .table baris kolom .sudah-memilih {
+  background-color: #12711C;
+  color: #FDFDFF;
+}
+main .table baris kolom .belum-memilih {
+  background-color: #D6E337;
+}
+main .table baris kolom.num {
+  font-size: 48px;
+}
+main .table baris kolom.no-urut {
+  flex: none;
+  width: 180px;
+}
+
+main#home-admin .datas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main#home-admin .datas .data {
+  width: 280px;
+  height: 240px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FDFDFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+main#home-admin .datas .data h2 {
+  align-self: flex-start;
+  font-size: 1em;
+  font-weight: 400;
+}
+main#home-admin .datas .data .num {
+  margin-bottom: 33px;
+  margin-top: 33px;
+  font-size: 48px;
+}
+main#home-admin .datas .data .text {
+  text-align: center;
+  width: 200px;
+}
+
+footer {
+  padding: 20px 30px;
 }

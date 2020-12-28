@@ -58,23 +58,31 @@ if (isset($_POST['btnLogin'])) {
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="./dist/css/style2.css">
+   <link rel="icon" href="./dist/img/voting.svg">
    <title>Document</title>
 </head>
 <body>
    <main id="login">
       <section>
-         <h1>Selamat Datang</h1>
-            <form action="" method="POST">
-            <div class="username">
-               <div>username</div>
-               <input type="text" name="username" placeholder="nama akun" required>
-            </div>
-            <div class="password">
-               <div for="">password</div>
-               <input type="password" name="password" placeholder="kata sandi" required>
-            </div>
-            <input type="submit" name="btnLogin" value="Login">
-         </form>
+				<h1>
+					<span style="font-weight: 250">
+						Selamat Datang di
+					</span>
+					<br>
+						Nge-Vote
+				</h1>
+				
+        <form action="" method="POST">
+          <div class="username">
+						<div>username</div>
+						<input type="text" name="username" placeholder="nama akun" required>
+          </div>
+          <div class="password">
+            <div for="">password</div>
+            <input type="password" name="password" placeholder="kata sandi" required>
+          </div>
+          <input type="submit" name="btnLogin" value="Login">
+        </form>
       </section>
    </main>
 

@@ -1,8 +1,12 @@
 <div class="space-between">
-	<div class="title">Manage Data-kandidat</div>
+	<?php if ($data_jenis=='PAN') { ?>
+		<div class="title">Manage Data-Kandidat</div>
 		<div class="btn-add-data">
 		   <a href="?page=add-calon">Add Data</a>
 		</div>
+	<?php } elseif ($data_jenis=='ADM') {?>
+		<div class="title">Manage Data-Kandidat</div>
+	<?php } ?>
 </div>
 <div class="table">
   <thead"> 
@@ -28,12 +32,16 @@
 		  <kolom><?php echo $data['visi']; ?></kolom>
 		  <kolom><?php echo $data['misi']; ?></kolom>
 		  <kolom>
-		  	<a href="?page=edit-calon&kode=<?php echo $data['id_calon']; ?>">
-		  		<img class="icon-aksi" src="./dist/img/edit.svg">
-		  	</a>
-		  	<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="?page=del-calon&kode=<?php echo $data['id_calon']; ?>">
-		  		<img class="icon-aksi" src="./dist/img/delete.svg">
-		  	</a>
+		  	<?php if ($data_jenis=='PAN') { ?>
+			  	<a href="?page=edit-calon&kode=<?php echo $data['id_calon']; ?>">
+			  		<img class="icon-aksi" src="./dist/img/edit.svg">
+			  	</a>
+			  	<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="?page=del-calon&kode=<?php echo $data['id_calon']; ?>">
+			  		<img class="icon-aksi" src="./dist/img/delete.svg">
+			  	</a>
+			  <?php } elseif ($data_jenis=='ADM') { ?>
+						-
+				<?php } ?>
 		  </kolom>
 		</baris>
     <?php } ?> 

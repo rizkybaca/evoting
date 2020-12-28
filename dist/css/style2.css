@@ -220,10 +220,10 @@ main#login section .username div, main#login section .password div {
 main#login section input[type=submit] {
   margin-top: 73px;
   padding: 9px 45px;
-  background-color: #1FA87D;
+  background-color: #2ec4b6;
   border-radius: 10px;
   border: none;
-  color: white;
+  color: #fdfffc;
   font-size: 24px;
   font-weight: 400;
   opacity: 0.8;

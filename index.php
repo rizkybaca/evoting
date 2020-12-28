@@ -50,7 +50,9 @@ if(isset($_GET["page"])){
         <div class="user-btn">--manage data--</div>
         <div class="user-data">
           <div id="box" class="user-box">
-            <a href="?page=data-panitia">Panitia</a>
+          <a href="?page=data-calon">Kandidat</a>
+          <a href="?page=data-pemilih">Pemilih</a>
+          <a href="?page=data-panitia">Panitia</a>
           </div>
          </div>
       </div>
@@ -80,7 +82,7 @@ if(isset($_GET["page"])){
          <div>nge-Vote</div>
       </nav>
 
-      <main>
+      <main id="home-admin">
         <?php 
         if(isset($_GET['page'])){
           $hal=$_GET['page'];

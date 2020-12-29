@@ -3,27 +3,24 @@
 	$pass_acak=mt_rand(1000, 9999);
 
  ?>
-<h3>Tambah data</h3>
-<form action="" method="POST">
-	<ul>
-		<li>
-			<label for="ini_nama">Nama Pemilih</label>
-		</li>
-		<li>
-			<input type="text" name="ini_nama" id="ini_nama" required>
-		</li>
-		<li>
-			<label for="ini_username">Username</label>
-		</li>
-		<li>
-			<input type="text" name="ini_username" id="ini_username" required>
-		</li>
-		<li>
-			<input type="submit" name="simpan" value="Simpan">
-			<a href="?page=data-pemilih">Batal</a>
-		</li>
-	</ul>
-</form>
+
+<main id="add-data">
+  <section>
+     <form action="" method="POST">
+        <div class="input">
+          <label for="no-urut">Nama Pemilih</label>
+          <input type="text" name="ini_nama" placeholder="isi nama disini" required>
+
+          <label for="">Username</label>
+          <input type="text" name="ini_username" placeholder="isi username disini" required>
+        </div>
+        <div class="btn">
+          <input type="submit" name="simpan" value="Tambah">
+          <a href="?page=data-pemilih">Kembali</a>
+        </div>
+     </form>
+  </section>
+</main>
 
 <?php 
 

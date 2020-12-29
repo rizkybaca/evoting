@@ -1,43 +1,27 @@
-<h3>Tambah data</h3>
-<form action="" method="POST" enctype="multipart/form-data">
-	<ul>
-		<li>
-			<label for="ini_id">No. Urut</label>
-		</li>
-		<li>
-			<input type="number" name="ini_id" id="ini_id" required>
-		</li>
-		<li>
-			<label for="ini_nama">Nama</label>
-		</li>
-		<li>
-			<input type="text" name="ini_nama" id="ini_nama" required>
-		</li>
-		<li>
-			<label for="ini_foto">Foto</label>
-		</li>
-		<li>
-			<input type="file" name="ini_foto" id="ini_foto" required>
-			<p><font color="red">"Format file .jpg"</font></p>
-		</li>
-		<li>
-			<label for="ini_visi">Visi</label>
-		</li>
-		<li>
-			<input type="text" name="ini_visi" id="ini_visi" required>
-		</li>
-		<li>
-			<label for="ini_misi">Misi</label>
-		</li>
-		<li>
-			<input type="text" name="ini_misi" id="ini_misi" required>
-		</li>
-		<li>
-			<input type="submit" name="simpan" value="Simpan">
-			<a href="?page=data-calon">Batal</a>
-		</li>
-	</ul>
-</form>
+<section>
+   <form action="" method="POST" enctype="multipart/form-data">
+      <div class="input">
+				<label for="no-urut">Nomor Urut</label>
+				<input type="number" name="ini_id" placeholder="isi nomor urut di sini" required>
+				<label for="">Nama</label>
+				<input type="text" name="ini_nama" placeholder="isi nama di sini" required>
+				<label for="">Visi</label>
+				<textarea name="ini_visi" placeholder="isi visi di sini" required></textarea>
+				<label for="">Misi</label>
+				<textarea name="ini_misi" placeholder="isi misi di sini" required></textarea>
+				<div class="upload-img">
+				  <div class="upload">
+						<label for="">Pilih foto di sini <font color="red">"Format file .jpg"</font></label>
+						<input type="file" name="ini_foto">
+				  </div>
+				</div>
+      </div>
+      <div class="btn">
+      	<input type="submit" name="simpan" value="Tambah">
+        <a href="?page=data-calon">Kembali</a>
+      </div>
+   </form>
+</section>
 
 <?php 
 

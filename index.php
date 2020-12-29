@@ -76,104 +76,104 @@ if(isset($_GET["page"])){
     <a onclick="return confirm('Apakah Anda yakin akan keluar?')" href="logout.php" class="logout">Log Out</a>
   </aside>
 
-   <div class="content">
-      <nav>
-         <img src="./dist/img/voting.svg">
-         <div>nge-Vote</div>
-      </nav>
+  <div class="content">
+    <nav>
+       <img src="./dist/img/voting.svg">
+       <div>nge-Vote</div>
+    </nav>
 
-      <main id="home-admin">
-        <?php 
-        if(isset($_GET['page'])){
-          $hal=$_GET['page'];
+    <main id="home-admin">
+      <?php 
+      if(isset($_GET['page'])){
+        $hal=$_GET['page'];
 
-          switch ($hal) {
-            //klik homepage
-            case 'admin':
-              include "home/admin";
-              break;
-            case 'panitia':
-              include "home/panitia.php";
-              break;
-            //manage data panitia
-            case 'data-panitia':
-              include "admin/panitia/data_panitia.php";
-              break;
-            case 'add-panitia':
-              include "admin/panitia/add_panitia.php";
-              break;
-            case 'edit-panitia':
-              include "admin/panitia/edit_panitia.php";
-              break;
-            case 'del-panitia':
-              include "admin/panitia/del_panitia.php";
-              break;
+        switch ($hal) {
+          //klik homepage
+          case 'admin':
+            include "home/admin";
+            break;
+          case 'panitia':
+            include "home/panitia.php";
+            break;
+          //manage data panitia
+          case 'data-panitia':
+            include "admin/panitia/data_panitia.php";
+            break;
+          case 'add-panitia':
+            header("Location: manage-data.php?page=add-panitia");
+            break;
+          // case 'edit-panitia':
+          //   header("Location: manage-data.php?page=edit-panitia&kode=6");
+          //   break;
+          // case 'del-panitia':
+          //   include "admin/panitia/del_panitia.php";
+          //   break;
 
-              //manage data calon
-            case 'data-calon':
-              include "admin/calon/data_calon.php";
-              break;
-            case 'add-calon':
-              include "admin/calon/add_calon.php";
-              break;
-            case 'edit-calon':
-              include "admin/calon/edit_calon.php";
-              break;
-            case 'del-calon':
-              include "admin/calon/del_calon.php";
-              break;
+            //manage data calon
+          case 'data-calon':
+            include "admin/calon/data_calon.php";
+            break;
+          case 'add-calon':
+            header("Location: manage-data.php?page=add-calon");
+            break;
+          // case 'edit-calon':
+          //   header("Location: manage-data.php?page=edit-calon");
+          //   break;
+          // case 'del-calon':
+          //   include "admin/calon/del_calon.php";
+          //   break;
 
-              //manage data pemilih
-            case 'data-pemilih':
-              include "admin/pemilih/data_pemilih.php";
-              break;
-            case 'add-pemilih':
-              include "admin/pemilih/add_pemilih.php";
-              break;
-            case 'edit-pemilih':
-              include "admin/pemilih/edit_pemilih.php";
-              break;
-            case 'del-pemilih':
-              include "admin/pemilih/del_pemilih.php";
-              break;
+            //manage data pemilih
+          case 'data-pemilih':
+            include "admin/pemilih/data_pemilih.php";
+            break;
+          case 'add-pemilih':
+            header("Location: manage-data.php?page=add-pemilih");
+            break;
+          // case 'edit-pemilih':
+          //   header("Location: manage-data.php?page=edit-pemilih");
+          //   break;
+          // case 'del-pemilih':
+          //   include "admin/pemilih/del_pemilih.php";
+          //   break;
 
-              //bilik suara
-            case 'PsSQAdT':
-              include "pemilih/calon/data_calon.php";
-              break;
-            case 'PsSQBpL':
-              include "pemilih/calon/pilih_calon.php";
-              break;
-            case 'PsSQBBK':
-              include "pemilih/calon/buka_calon.php";
-              break;
+            //bilik suara
+          case 'PsSQAdT':
+            include "pemilih/calon/data_calon.php";
+            break;
+          case 'PsSQBpL':
+            include "pemilih/calon/pilih_calon.php";
+            break;
+          case 'PsSQBBK':
+            include "pemilih/calon/buka_calon.php";
+            break;
 
-              //kotak suara
-            case 'data-kotak':
-              include "admin/kotak/data_kotak.php";
-              break;
-            case 'data-suara':
-              include "admin/suara/data_suara.php";
-              break;
-            //default
-            default:
-              echo "<center><h1> ERROR !</h1></center>";
-              break;
-          }
-        } else {
-        // auto homepage
-          if ($data_level=="Administrator"){
-            include "home/admin.php";
-          } elseif ($data_level=="Panitia"){
-            include "home/admin.php";
-          }
+            //kotak suara
+          case 'data-kotak':
+            include "admin/kotak/data_kotak.php";
+            break;
+          case 'data-suara':
+            include "admin/suara/data_suara.php";
+            break;
+          //default
+          default:
+            echo "<center><h1> ERROR !</h1></center>";
+            break;
         }
-          ?>
-      </main>   
-      <footer>
-         <div>Nge-Vote | 2020 | all right reserved</div>
-      </footer>
-   </div>
+      } else {
+      // auto homepage
+        if ($data_level=="Administrator"){
+          include "home/admin.php";
+        } elseif ($data_level=="Panitia"){
+          include "home/admin.php";
+        }
+      }
+        ?>
+    </main>   
+    <footer>
+       <div>Nge-Vote | 2020 | all right reserved</div>
+    </footer>
+  </div>
 </body>
 
 </html>

@@ -24,63 +24,75 @@ if(isset($_GET["page"])){
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>nge-Vote</title>
-	<link rel="stylesheet" type="text/css" href="./dist/css/style1.css">
-	<script type="text/javascript" src="./dist/js/Chart.js"></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./dist/css/style2.css">
+   <link rel="icon" href="./dist/img/voting.svg">
+   <script type="text/javascript" src="./dist/js/Chart.js"></script>
+   <title>nge-Vote</title>
 </head>
+
 <body>
-	<nav>
-		<div class="brand">
-			Ngevote
-		</div>
-		<div class="right">
-			<div class="menu">
-				<a href="index1.php">Home</a>
-				<a href="?page=data-suara">Quick Count</a>
-			</div>
-			<div class="log">
-			<a onclick="return confirm('Apakah Anda yakin akan keluar?')" href="logout.php">Halo, <?= $data_nama; ?></a>
-			</div>
-		</div>
-	</nav>
-	<main>
-	<?php 
-	if (isset($_GET['page'])) {
-		$hal=$_GET['page'];
+   <nav>
+      <div class="container">
+         <div class="logo">
+            <img src="./dist/img/voting.svg">
+            <div>nge-Vote</div>
+         </div>
+         <div class="navbar">
+            <a href="index1.php" class="home">Home</a>
+            <a href="?page=data-suara" class="quick">Quick Count</a>
+            <div class="btn"><a onclick="return confirm('Apakah Anda yakin akan keluar?')" href="logout.php">Halo, <?= $data_nama; ?></a></div>
+         </div>
+      </div>
+   </nav>
 
-		switch ($hal){
-			// klik homepage
-			case 'pemilih':
+   <main id="home">
+      <?php 
+			if (isset($_GET['page'])) {
+				$hal=$_GET['page'];
+
+				switch ($hal){
+					// klik homepage
+					case 'pemilih':
+						include "home/pemilih.php";
+						break;
+
+					// bilik suara
+					case 'PsSQAdT':
+						include "pemilih/calon/data_calon.php";
+						break;
+					case 'PsSQBpL':
+						include "pemilih/calon/pilih_calon.php";
+						break;
+					case 'PsSQBBK':
+						include "pemilih/calon/buka_calon.php";
+						break;
+
+					// kotak suara
+					case 'data-suara':
+						include "pemilih/suara/data_suara.php";
+						break;
+
+					// default
+					default :
+						echo "<center><h1> ERROR !</h1></center>";
+						break;
+				}
+			} else{
+				// auto homepage
 				include "home/pemilih.php";
-				break;
+			} ?>
+   </main>
 
-			// bilik suara
-			case 'PsSQAdT':
-				include "pemilih/calon/data_calon.php";
-				break;
-			case 'PsSQBpL':
-				include "pemilih/calon/pilih_calon.php";
-				break;
-			case 'PsSQBBK':
-				include "pemilih/calon/buka_calon.php";
-				break;
-
-			// kotak suara
-			case 'data-suara':
-				include "pemilih/suara/data_suara.php";
-				break;
-
-			// default
-			default :
-				echo "<center><h1> ERROR !</h1></center>";
-				break;
-		}
-	} else{
-		// auto homepage
-		include "home/pemilih.php";
-	} ?>
-	</main>
+   <footer>
+      <div class="container">
+         <div>Nge-Vote | 2020 | all right reserved</div>
+      </div>
+   </footer>
 </body>
+
 </html>

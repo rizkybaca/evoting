@@ -25,6 +25,7 @@ body {
   height: 100vh;
   display: flex;
   font-family: "Roboto", sans-serif;
+/*  overflow: auto;*/
 }
 
 .content {
@@ -44,6 +45,7 @@ aside {
   color: #FDFDFF;
   font-size: 18px;
   text-align: center;
+  overflow: auto;
 }
 aside .admin {
   margin-bottom: 56px;
@@ -78,10 +80,8 @@ aside .navbar a:hover {
 }
 aside .navbar .user-btn {
   margin-bottom: 10px;
-/*  cursor: pointer;*/
   color: #8d99ae;
   font-size: 12px;
-
 }
 aside .navbar .user-data .user-box.block {
   display: block;
@@ -156,6 +156,9 @@ main .table baris kolom {
   display: flex;
   flex: 1;
   align-items: center;
+  box-sizing: border-box;
+/*  padding: 10px;
+  box-sizing: border-box;*/
 }
 main .table baris kolom .foto {
   width: 161px;
@@ -186,7 +189,7 @@ main .table baris kolom.num {
 }
 main .table baris kolom.no-urut {
   flex: none;
-  width: 180px;
+  width: 100px;
 }
 
 main#home-admin .datas {

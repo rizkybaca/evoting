@@ -7,49 +7,31 @@ if(isset($_GET['kode'])){
 }
 ?>
 
-<h3>Ubah data</h3>
-
-<h3>Tambah data</h3>
-<form action="" method="POST" enctype="multipart/form-data">
-	<ul>
-		<li>
-			<label for="ini_id">No. Urut</label>
-		</li>
-		<li>
-			<input type="number" name="ini_id" id="ini_id" value="<?php echo $data_cek['id_calon']; ?>" readonly>
-		</li>
-		<li>
-			<label for="ini_nama">Nama</label>
-		</li>
-		<li>
-			<input type="text" name="ini_nama" id="ini_nama" value="<?php echo $data_cek['nama_calon']; ?>">
-		</li>
-		<li>
-			<label for="foto_calon">Foto</label>
-		</li>
-		<li>
-			<img width="60px" src="foto/<?=$data_cek['foto_calon'];?>"><br>
-			<input type="file" name="foto_calon" id="foto_calon">
-			<p><font color="red">"Format file .jpg"</font></p>
-		</li>
-		<li>
-			<label for="ini_visi">Visi</label>
-		</li>
-		<li>
-			<input type="text" name="ini_visi" id="ini_visi" value="<?php echo $data_cek['visi']; ?>">
-		</li>
-		<li>
-			<label for="ini_misi">Misi</label>
-		</li>
-		<li>
-			<input type="text" name="ini_misi" id="ini_misi" value="<?php echo $data_cek['misi']; ?>">
-		</li>
-		<li>
-			<input type="submit" name="ubah" value="Simpan">
-			<a href="?page=data-calon">Batal</a>
-		</li>
-	</ul>
-</form>
+<section>
+   <form action="" method="POST" enctype="multipart/form-data">
+      <div class="input">
+				<label for="no-urut">Nomor Urut</label>
+				<input type="number" name="ini_id" value="<?php echo $data_cek['id_calon']; ?>" readonly>
+				<label for="">Nama</label>
+				<input type="text" name="ini_nama" value="<?php echo $data_cek['nama_calon']; ?>" required>
+				<label for="">Visi</label>
+				<textarea name="ini_visi" required><?= $data_cek['visi']; ?></textarea>
+				<label for="">Misi</label>
+				<textarea name="ini_misi" required><?= $data_cek['misi']; ?></textarea>
+				<div class="upload-img">
+				  <div class="upload">
+						<label for="">Pilih foto di sini <font color="red">"Format file .jpg"</font></label>
+						<input type="file" name="ini_foto">
+				  </div>
+				  <img width="60px" src="foto/<?=$data_cek['foto_calon'];?>">
+				</div>
+      </div>
+      <div class="btn">
+      	<input type="submit" name="ubah" value="Tambah">
+        <a href="?page=data-calon">Kembali</a>
+      </div>
+   </form>
+</section>
 
 <?php 
 

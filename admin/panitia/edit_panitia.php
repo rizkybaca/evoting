@@ -5,37 +5,29 @@ if(isset($_GET['kode'])){
   $query_cek = mysqli_query($koneksi, $sql_cek);
   $data_cek = mysqli_fetch_array($query_cek,MYSQLI_BOTH);
 }
+?>
 
- ?>
+<main id="add-data">
+  <section>
+		<form action="" method="POST">
+			<input type="hidden" readonly name="ini_id" value="<?php echo $data_cek['id_pengguna'];?>">
+		  <div class="input">
+				<label for="no-urut">Nama Panitia</label>
+				<input type="text" name="ini_nama" placeholder="isi nama disini" value="<?php echo $data_cek['nama_pengguna'];?>">
 
-<h3>Ubah data</h3>
-<form action="" method="POST">
-	<input type="hidden" readonly name="ini_id" value="<?php echo $data_cek['id_pengguna'];?>">
-	<ul>
-		<li>
-			<label for="ini_nama">Nama Panitia</label>
-		</li>
-		<li>
-			<input type="text" name="ini_nama" id="ini_nama" value="<?php echo $data_cek['nama_pengguna'];?>">
-		</li>
-		<li>
-			<label for="ini_username">Username</label>
-		</li>
-		<li>
-			<input type="text" name="ini_username" id="ini_username" value="<?php echo $data_cek['username']; ?>">
-		</li>
-		<li>
-			<label for="pass">Password</label>
-		</li>
-		<li>
-			<input type="password" name="ini_password" id="pass" value="<?php echo $data_cek['password']; ?>">
-			<input type="checkbox" id="mybutton" onclick="change()">
-		</li>
-		<li>
-			<label for="ini_level">Level</label>
-		</li>
-		<li>
-			<select name="ini_level">
+				<label for="">Username</label>
+				<input type="text" name="ini_username" placeholder="isi username disini" value="<?php echo $data_cek['username']; ?>">
+
+				<label for="">Password</label>
+				<input id="pass" type="password" name="ini_password" placeholder="isi password disini" value="<?php echo $data_cek['password']; ?>">
+
+				<div class="checkbox">
+				  <input type="checkbox" name="look-password" id="mybutton" onclick="change()">
+				  <label for="look-password">lihat password</label>
+				</div>
+		  </div>
+
+		  <select name="ini_level">
 				<option value="">- Pilih -</option>
 				<!-- ambil data level -->
 				<?php 
@@ -52,7 +44,7 @@ if(isset($_GET['kode'])){
 							</option>
 						";
 					}
-					if ($data_cek['level'] == "panitia") {
+					if ($data_cek['level'] == "Panitia") {
 						echo "
 							<option value='Panitia' selected>
 								Panitia
@@ -67,13 +59,16 @@ if(isset($_GET['kode'])){
 					}
 				 ?>
 			</select>
-		</li>
-		<li>
-			<input type="submit" name="simpan" value="Simpan">
-			<a href="?page=data-panitia">Batal</a>
-		</li>
-	</ul>
-</form>
+
+		  <div class="btn">
+		     <a href="?page=data-panitia">Kembali</a>
+		     <input type="submit" name="simpan" value="Tambah">
+		  </div>
+		</form>
+  </section>
+</main>
+
+
 <script type="text/javascript">
 	function change(){
 	  var x = document.getElementById('pass').type;

@@ -7,7 +7,34 @@ if(isset($_GET['kode'])){
 }
  ?>
 
-<h3>Ubah data</h3>
+<main id="add-data">
+  <section>
+		<form action="" method="POST">
+			<input type="hidden" readonly name="ini_id" value="<?php echo $data_cek['id_pengguna'];?>">
+		  <div class="input">
+				<label for="no-urut">Nama Pemilih</label>
+				<input type="text" name="ini_nama" placeholder="isi nama disini" value="<?php echo $data_cek['nama_pengguna'];?>">
+
+				<label for="">Username</label>
+				<input type="text" name="ini_username" placeholder="isi username disini" value="<?php echo $data_cek['username']; ?>">
+
+				<label for="">Password</label>
+				<input id="pass" type="password" name="ini_password" placeholder="isi password disini" value="<?php echo $data_cek['password']; ?>">
+
+				<div class="checkbox">
+				  <input type="checkbox" name="look-password" id="mybutton" onclick="change()">
+				  <label for="look-password">lihat password</label>
+				</div>
+		  </div>
+		  <div class="btn">
+		     <a href="?page=data-pemilih">Kembali</a>
+		     <input type="submit" name="simpan" value="Tambah">
+		  </div>
+		</form>
+  </section>
+</main>
+
+<!-- <h3>Ubah data</h3>
 <form action="" method="POST">
 	<input type="hidden" readonly name="ini_id" value="<?php echo $data_cek['id_pengguna']; ?>">
 	<ul>
@@ -35,7 +62,7 @@ if(isset($_GET['kode'])){
 			<a href="?page=data-pemilih">Batal</a>
 		</li>
 	</ul>
-</form>
+</form> -->
 <script type="text/javascript">
 	function change(){
 	  var x = document.getElementById('pass').type;

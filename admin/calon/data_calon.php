@@ -33,10 +33,10 @@
 		  <kolom><?php echo $data['misi']; ?></kolom>
 		  <kolom>
 		  	<?php if ($data_jenis=='PAN') { ?>
-			  	<a href="?page=edit-calon&kode=<?php echo $data['id_calon']; ?>">
+			  	<a href="manage-data.php?page=edit-calon&kode=<?php echo $data['id_calon']; ?>">
 			  		<img class="icon-aksi" src="./dist/img/edit.svg">
 			  	</a>
-			  	<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="?page=del-calon&kode=<?php echo $data['id_calon']; ?>">
+			  	<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="manage-data.php?page=del-calon&kode=<?php echo $data['id_calon']; ?>">
 			  		<img class="icon-aksi" src="./dist/img/delete.svg">
 			  	</a>
 			  <?php } elseif ($data_jenis=='ADM') { ?>

@@ -1,40 +1,29 @@
-<h3>Tambah data</h3>
-<form action="" method="POST">
-	<ul>
-		<li>
-			<label for="ini_nama">Nama Panitia</label>
-		</li>
-		<li>
-			<input type="text" name="ini_nama" id="ini_nama" required>
-		</li>
-		<li>
-			<label for="ini_username">Username</label>
-		</li>
-		<li>
-			<input type="text" name="ini_username" id="ini_username" required>
-		</li>
-		<li>
-			<label for="ini_password">Password</label>
-		</li>
-		<li>
-			<input type="password" name="ini_password" id="ini_password" required>
-		</li>
-		<li>
-			<label for="ini_level">Level</label>
-		</li>
-		<li>
-			<select name="ini_level">
-				<option>- Pilih -</option>
+<main id="add-data">
+<section>
+	<form action="" method="POST">
+	  <div class="input">
+			<label for="no-urut">Nama Panitia</label>
+			<input type="text" name="ini_nama" placeholder="isi nama disini" required>
+
+			<label for="">Username</label>
+			<input type="text" name="ini_username" placeholder="isi username disini" required>
+
+			<label for="">Password</label>
+			<input type="password" name="ini_password" placeholder="isi password disini" required>
+			<label for="">Level</label>
+			<select name="ini_level" required>
+				<option value="">- Pilih -</option>
 				<option value="Administrator">Administrator</option>
 				<option value="Panitia">Panitia</option>
 			</select>
-		</li>
-		<li>
-			<input type="submit" name="simpan" value="Simpan">
-			<a href="?page=data-panitia">Batal</a>
-		</li>
-	</ul>
-</form>
+	  </div>
+	  <div class="btn">
+	  	<input type="submit" name="simpan" value="Tambah">
+	    <a href="?page=data-panitia">Kembali</a>
+	  </div>
+	</form>
+</section>
+</main>
 
 <?php 
 

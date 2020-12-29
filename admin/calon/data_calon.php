@@ -29,8 +29,8 @@
 		  	<img class="foto" src="foto/<?php echo $data['foto_calon']; ?>">
 		  </kolom>
 		  <kolom><?php echo $data['nama_calon']; ?></kolom>
-		  <kolom><?php echo $data['visi']; ?></kolom>
-		  <kolom><?php echo $data['misi']; ?></kolom>
+		  <kolom class="visi"><?= $data['visi']; ?></kolom>
+		  <kolom class="misi"><?=$data['misi'];?></kolom>
 		  <kolom>
 		  	<?php if ($data_jenis=='PAN') { ?>
 			  	<a href="manage-data.php?page=edit-calon&kode=<?php echo $data['id_calon']; ?>">

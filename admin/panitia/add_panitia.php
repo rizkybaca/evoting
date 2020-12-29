@@ -11,7 +11,7 @@
 			<label for="">Password</label>
 			<input type="password" name="ini_password" placeholder="isi password disini" required>
 			<label for="">Level</label>
-			<select name="ini_level" required>
+			<select class="lvl" name="ini_level" required>
 				<option value="">- Pilih -</option>
 				<option value="Administrator">Administrator</option>
 				<option value="Panitia">Panitia</option>

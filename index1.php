@@ -45,7 +45,12 @@ if(isset($_GET["page"])){
          <div class="navbar">
             <a href="index1.php" class="home">Home</a>
             <a href="?page=data-suara" class="quick">Quick Count</a>
-            <div class="btn"><a onclick="return confirm('Apakah Anda yakin akan keluar?')" href="logout.php">Halo, <?= $data_nama; ?></a></div>
+            <div class="btn">
+	            <span>Halo, <?= $data_nama;?></span>
+	            <a class="tombol" onclick="return confirm('Apakah Anda yakin akan keluar?')" href="logout.php">
+	            <img src="./dist/img/logout.svg">
+	            </a>
+            </div>
          </div>
       </div>
    </nav>

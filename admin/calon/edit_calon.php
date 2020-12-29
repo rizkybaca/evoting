@@ -27,8 +27,8 @@ if(isset($_GET['kode'])){
 				</div>
       </div>
       <div class="btn">
-      	<input type="submit" name="ubah" value="Tambah">
-        <a href="?page=data-calon">Kembali</a>
+      	<input type="submit" name="ubah" value="Simpan">
+        <a href="?page=data-calon">Batal</a>
       </div>
    </form>
 </section>

@@ -27,42 +27,14 @@ if(isset($_GET['kode'])){
 				</div>
 		  </div>
 		  <div class="btn">
-		     <a href="?page=data-pemilih">Kembali</a>
-		     <input type="submit" name="simpan" value="Tambah">
+		  	<input type="submit" name="simpan" value="Simpan">
+		    <a href="?page=data-pemilih">Batal</a>
 		  </div>
 		</form>
   </section>
 </main>
 
-<!-- <h3>Ubah data</h3>
-<form action="" method="POST">
-	<input type="hidden" readonly name="ini_id" value="<?php echo $data_cek['id_pengguna']; ?>">
-	<ul>
-		<li>
-			<label for="ini_nama">Nama Pemilih</label>
-		</li>
-		<li>
-			<input type="text" name="ini_nama" id="ini_nama" value="<?php echo $data_cek['nama_pengguna']; ?>">
-		</li>
-		<li>
-			<label for="ini_username">Username</label>
-		</li>
-		<li>
-			<input type="text" name="ini_username" id="ini_username" value="<?php echo $data_cek['username']; ?>">
-		</li>
-		<li>
-			<label for="pass">Password</label>
-		</li>
-		<li>
-			<input type="password" name="ini_password" id="pass" value="<?php echo $data_cek['password']; ?>">
-			<input type="checkbox" id="mybutton" onclick="change()">
-		</li>
-		<li>
-			<input type="submit" name="simpan" value="Simpan">
-			<a href="?page=data-pemilih">Batal</a>
-		</li>
-	</ul>
-</form> -->
+
 <script type="text/javascript">
 	function change(){
 	  var x = document.getElementById('pass').type;

@@ -48,7 +48,7 @@ aside {
   overflow: auto;
 }
 aside .admin {
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 aside .admin img {
   width: 110px;
@@ -153,12 +153,17 @@ main .table baris {
   border-bottom: 1px solid black;
 }
 main .table baris kolom {
+  padding: 5px;
   display: flex;
   flex: 1;
   align-items: center;
   box-sizing: border-box;
-/*  padding: 10px;
-  box-sizing: border-box;*/
+  /*text-align: center;*/
+}
+main .table baris kolom .misi,
+main .table baris kolom .visi{
+  word-wrap: break-word;
+  width: 176px;
 }
 main .table baris kolom .foto {
   width: 161px;
@@ -191,6 +196,7 @@ main .table baris kolom.no-urut {
   flex: none;
   width: 100px;
 }
+
 
 main#home-admin .datas {
   display: flex;

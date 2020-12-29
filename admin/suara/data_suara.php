@@ -18,7 +18,7 @@
 	    <baris>
 	      <kolom class="no-urut"><?php echo $data['id_calon']; ?></kolom>
 	      <kolom>
-	      	<img src="foto/<?php echo $data['foto_calon']; ?>" alt="">
+	      	<img class="foto" src="foto/<?php echo $data['foto_calon']; ?>" alt="">
 	      </kolom>
 	      <kolom><?php echo $data['nama_calon']; ?></kolom>
 	      <kolom class="num">

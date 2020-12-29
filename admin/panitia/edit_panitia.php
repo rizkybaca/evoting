@@ -27,7 +27,7 @@ if(isset($_GET['kode'])){
 				</div>
 		  </div>
 
-		  <select name="ini_level">
+		  <select class="lvl" name="ini_level">
 				<option value="">- Pilih -</option>
 				<!-- ambil data level -->
 				<?php 
@@ -61,8 +61,8 @@ if(isset($_GET['kode'])){
 			</select>
 
 		  <div class="btn">
-		     <a href="?page=data-panitia">Kembali</a>
 		     <input type="submit" name="simpan" value="Tambah">
+		     <a href="?page=data-panitia">Kembali</a>
 		  </div>
 		</form>
   </section>

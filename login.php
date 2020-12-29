@@ -57,9 +57,9 @@ if (isset($_POST['btnLogin'])) {
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./dist/css/style2.css">
+   <link rel="stylesheet" href="./dist/css/style1.css">
    <link rel="icon" href="./dist/img/voting.svg">
-   <title>Document</title>
+   <title>Login</title>
 </head>
 <body>
    <main id="login">
@@ -67,8 +67,7 @@ if (isset($_POST['btnLogin'])) {
 				<h1>
 					<span style="font-weight: 250">
 						Selamat Datang di
-					</span>
-					<br>
+					</span><br>
 						Nge-Vote
 				</h1>
 				

@@ -8,37 +8,30 @@ if(isset($_GET['kode'])){
 }
  ?>
 
-<h3>Data Kandidat</h3>
-<br>
-<a href="?page=PsSQAdT">Kembali</a>
-<br>
-<br>
-<table>
-	<thead>
-		<tr>
-			<th>
-				<center>Kandidat Pilihan Anda</center>
-			</th>
-		</tr>
-	</thead>
-	<tbody>
-		<?php 
+<div id="voting">
+  <section>
+  	<?php 
 		$sql = $koneksi->query("SELECT * FROM tb_calon WHERE id_calon=$kode");
 		while ($data= $sql->fetch_assoc()) { ?>
-			<tr>
-				<td align="center">
-					<h1><?php echo $data['id_calon']; ?></h1>
-					<br>
-					<img src="foto/<?php echo $data['foto_calon']; ?>" width="400px" />
-					<br>
-					<h2><?php echo $data['nama_calon']; ?></h2>
-					<br>
-					<form action="pilih_calon.php" method="GET">
-						<a href="?page=PsSQBpL&kode=<?php echo $data['id_calon']; ?>">Tetapkan Pilihan</a>
-					</form>
-				</td>
-			</tr>
-		<?php 
-		} ?>
-	</tbody>
-</table>
+		<div class="profile">
+		  <div class="text">
+				<div class="no">Nomor Urut: <?php echo $data['id_calon']; ?></div>
+				<div class="name"><?php echo $data['nama_calon']; ?></div>
+				<div class="visi"><?php echo $data['visi']; ?></div>
+				<div class="misi"><?php echo $data['misi']; ?></div>
+		  </div>
+		  
+		  <div class="btn">
+				
+				<form action="pilih_calon.php" method="GET">
+					<a href="?page=PsSQBpL&kode=<?php echo $data['id_calon']; ?>" class="coblos">Coblos</a>
+				</form>
+				<a href="?page=PsSQAdT" class="kembali">kembali</a>
+		  </div>
+		</div>
+		<div class="img">
+		  <img width="400px" src="foto/<?php echo $data['foto_calon']; ?>">
+		</div>
+		<?php } ?>
+  </section>
+</div>

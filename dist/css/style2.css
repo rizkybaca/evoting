@@ -81,17 +81,6 @@ nav .container .navbar div.btn a {
   margin: 0;
 }
 
-nav .container .navbar div.btn .hop {
-  background-color: #e71d36;
-  padding: 10px;
-  display: none;
-  width: 150px;
-  color: #fdfffc;
-}
-nav .container .navbar div.btn a :hover + nav.container.navbar div.btn .hop{
-  display: block;
-}
-
 main#home {
   background-color: #E7E7EB;
   display: flex;

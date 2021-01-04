@@ -102,12 +102,6 @@ if(isset($_GET["page"])){
           case 'add-panitia':
             header("Location: manage-data.php?page=add-panitia");
             break;
-          // case 'edit-panitia':
-          //   header("Location: manage-data.php?page=edit-panitia&kode=6");
-          //   break;
-          // case 'del-panitia':
-          //   include "admin/panitia/del_panitia.php";
-          //   break;
 
             //manage data calon
           case 'data-calon':
@@ -116,12 +110,6 @@ if(isset($_GET["page"])){
           case 'add-calon':
             header("Location: manage-data.php?page=add-calon");
             break;
-          // case 'edit-calon':
-          //   header("Location: manage-data.php?page=edit-calon");
-          //   break;
-          // case 'del-calon':
-          //   include "admin/calon/del_calon.php";
-          //   break;
 
             //manage data pemilih
           case 'data-pemilih':
@@ -130,12 +118,6 @@ if(isset($_GET["page"])){
           case 'add-pemilih':
             header("Location: manage-data.php?page=add-pemilih");
             break;
-          // case 'edit-pemilih':
-          //   header("Location: manage-data.php?page=edit-pemilih");
-          //   break;
-          // case 'del-pemilih':
-          //   include "admin/pemilih/del_pemilih.php";
-          //   break;
 
             //bilik suara
           case 'PsSQAdT':

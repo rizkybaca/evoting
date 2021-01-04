@@ -17,7 +17,7 @@ if(isset($_GET['kode'])){
 				<label for="">Visi</label>
 				<textarea name="ini_visi" required><?= $data_cek['visi']; ?></textarea>
 				<label for="">Misi</label>
-				<textarea name="ini_misi" required><?= $data_cek['misi']; ?></textarea>
+				<textarea id="ckeditor" class="ckeditor" name="ini_misi" required><?= $data_cek['misi']; ?></textarea>
 				<div class="upload-img">
 				  <div class="upload">
 						<label for="">Pilih foto di sini <font color="red">"Format file .jpg"</font></label>

@@ -1,4 +1,4 @@
-<section>
+<section class="satu">
    <form action="" method="POST" enctype="multipart/form-data">
       <div class="input">
 				<label for="no-urut">Nomor Urut</label>
@@ -8,7 +8,10 @@
 				<label for="">Visi</label>
 				<textarea name="ini_visi" placeholder="isi visi di sini" required></textarea>
 				<label for="">Misi</label>
-				<textarea name="ini_misi" placeholder="isi misi di sini" required></textarea>
+				<textarea name="ini_misi" placeholder="isi misi di sini" id="ckeditor" class="ckeditor" required></textarea>
+				<script>
+					
+				</script>
 				<div class="upload-img">
 				  <div class="upload">
 						<label for="">Pilih foto di sini <font color="red">"Format file .jpg"</font></label>

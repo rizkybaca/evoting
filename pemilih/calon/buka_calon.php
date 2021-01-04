@@ -18,7 +18,7 @@ if(isset($_GET['kode'])){
 				<div class="no">Nomor Urut: <?php echo $data['id_calon']; ?></div>
 				<div class="name"><?php echo $data['nama_calon']; ?></div>
 				<div class="visi"><?php echo $data['visi']; ?></div>
-				<div class="misi"><?php echo $data['misi']; ?></div>
+				<div><?= html_entity_decode($data['misi']);?></div>
 		  </div>
 		  
 		  <div class="btn">

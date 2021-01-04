@@ -31,6 +31,7 @@ if(isset($_GET["page"])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="./dist/css/style2.css">
    <link rel="icon" href="./dist/img/voting.svg">
+   <script type="text/javascript" src="./plugins/ckeditor/ckeditor.js"></script>
    <script type="text/javascript" src="./dist/js/Chart.js"></script>
    <title>nge-Vote</title>
 </head>

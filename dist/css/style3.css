@@ -160,10 +160,10 @@ main .table baris kolom {
   box-sizing: border-box;
   /*text-align: center;*/
 }
-main .table baris kolom .misi,
-main .table baris kolom .visi{
+main .table baris kolom .misi{
   word-wrap: break-word;
   width: 176px;
+  
 }
 main .table baris kolom .foto {
   width: 161px;

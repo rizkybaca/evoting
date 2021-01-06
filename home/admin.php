@@ -51,4 +51,5 @@
 			<div class="num text-berry"><?php echo $belum; ?></div>
 			<div class="text">Jumlah Peserta yang belum Mencoblos</div>
 	  </div>
+	</a>
 </div>

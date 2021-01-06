@@ -20,8 +20,8 @@
 				</div>
       </div>
       <div class="btn">
-      	<input type="submit" name="simpan" value="Tambah">
         <a href="?page=data-calon">Kembali</a>
+        <input type="submit" name="simpan" value="Tambah">
       </div>
    </form>
 </section>

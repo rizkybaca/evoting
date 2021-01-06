@@ -7,7 +7,7 @@ if(isset($_GET['kode'])){
 }
  ?>
 
-<main id="add-data">
+<!-- <main id="add-data"> -->
   <section>
 		<form action="" method="POST">
 			<input type="hidden" readonly name="ini_id" value="<?php echo $data_cek['id_pengguna'];?>">
@@ -27,12 +27,12 @@ if(isset($_GET['kode'])){
 				</div>
 		  </div>
 		  <div class="btn">
-		  	<input type="submit" name="simpan" value="Simpan">
 		    <a href="?page=data-pemilih">Batal</a>
+		    <input type="submit" name="simpan" value="Simpan">
 		  </div>
 		</form>
   </section>
-</main>
+<!-- </main> -->
 
 
 <script type="text/javascript">

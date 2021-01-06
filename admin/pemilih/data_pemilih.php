@@ -41,10 +41,10 @@
         </kolom>
         <kolom>
         	<?php if ($data_jenis=='PAN') { ?>
-      			<a href="manage-data.php?page=edit-pemilih&kode=<?php echo $data['id_pengguna']; ?>">
+      			<a href="?page=edit-pemilih&kode=<?php echo $data['id_pengguna']; ?>">
       				<img class="icon-aksi" src="./dist/img/edit.svg">
       			</a>
-      			<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="manage-data.php?page=del-pemilih&kode=<?php echo $data['id_pengguna']; ?>">
+      			<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="?page=del-pemilih&kode=<?php echo $data['id_pengguna']; ?>">
       				<img class="icon-aksi" src="./dist/img/delete.svg">
       			</a>
       		<?php } elseif ($data_jenis=='ADM') { ?>

@@ -4,7 +4,9 @@
 		<baris>
 		  <kolom>Nomor</kolom>
 		  <kolom>Nama Kandidat</kolom>
-		  <kolom>ID Pemilih</kolom>
+		  <?php if ($data_jenis=='ADM'): ?>
+		  	<kolom>ID Pemilih</kolom>
+		  <?php endif ?>
 		  <kolom>Waktu Memilih</kolom>
 		</baris>
   </thead>
@@ -20,7 +22,9 @@
 			<baris>
 			  <kolom><?php echo $no++; ?></kolom>
 			  <kolom><?php echo $data['nama_calon']; ?></kolom>
-			  <kolom><?php echo $data['id_pemilih']; ?></kolom>
+			  <?php if ($data_jenis=='ADM'): ?>
+			  	<kolom><?php echo $data['id_pemilih']; ?></kolom>
+			  <?php endif ?>
 			  <kolom><?php echo $data['waktu']; ?></kolom>
 			</baris>
 		<?php } ?>

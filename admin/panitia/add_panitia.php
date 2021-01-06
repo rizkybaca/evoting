@@ -1,4 +1,4 @@
-<main id="add-data">
+<!-- <main id="add-data"> -->
 <section>
 	<form action="" method="POST">
 	  <div class="input">
@@ -18,12 +18,12 @@
 			</select>
 	  </div>
 	  <div class="btn">
-	  	<input type="submit" name="simpan" value="Tambah">
 	    <a href="?page=data-panitia">Kembali</a>
+	    <input type="submit" name="simpan" value="Tambah">
 	  </div>
 	</form>
 </section>
-</main>
+<!-- </main> -->
 
 <?php 
 

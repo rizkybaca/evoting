@@ -28,10 +28,10 @@
 			  <kolom><?php echo $data['username']; ?></kolom>
 			  <kolom>
 			  	<?php if ($data_jenis=='ADM') { ?>
-						<a href="manage-data.php?page=edit-panitia&kode=<?php echo $data['id_pengguna']; ?>">
+						<a href="?page=edit-panitia&kode=<?php echo $data['id_pengguna']; ?>">
 							<img class="icon-aksi" src="./dist/img/edit.svg">
 						</a>
-						<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="manage-data.php?page=del-panitia&kode=<?php echo $data['id_pengguna']; ?>">
+						<a onclick="return confirm('apakah Anda yakin hapus data ini?')" href="?page=del-panitia&kode=<?php echo $data['id_pengguna']; ?>">
 							<img class="icon-aksi" src="./dist/img/delete.svg">
 						</a>
 					<?php } elseif ($data_jenis=='PAN') { ?>

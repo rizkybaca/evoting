@@ -21,12 +21,11 @@ if(isset($_GET['kode'])){
 				<div><?= html_entity_decode($data['misi']);?></div>
 		  </div>
 		  
-		  <div class="btn">
-				
+		  <div class="btn">		
+				<a href="?page=PsSQAdT" class="kembali">kembali</a>
 				<form action="pilih_calon.php" method="GET">
 					<a href="?page=PsSQBpL&kode=<?php echo $data['id_calon']; ?>" class="coblos">Coblos</a>
 				</form>
-				<a href="?page=PsSQAdT" class="kembali">kembali</a>
 		  </div>
 		</div>
 		<div class="img">

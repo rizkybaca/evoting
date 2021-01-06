@@ -33,9 +33,20 @@ if(isset($_GET["page"])){
    <link rel="icon" href="./dist/img/voting.svg">
    <script type="text/javascript" src="./dist/js/Chart.js"></script>
    <title>nge-Vote</title>
+   <script>
+    function refreshpage() {
+      setTimeout(function() {
+        location.reload();
+      }, 3000);
+    }
+  </script>
 </head>
-
-<body>
+<?php 
+  if ($_SESSION['ses_dump']==="data-suara") {
+    echo '<body onload="refreshpage()">';
+  } else{
+    echo '<body>';
+  } ?>
    <nav>
       <div class="container">
          <div class="logo">
@@ -48,7 +59,7 @@ if(isset($_GET["page"])){
             <div class="btn">
 	            <span>Halo, <?= $data_nama;?></span>
 	            <a class="tombol" onclick="return confirm('Apakah Anda yakin akan keluar?')" href="logout.php">
-	            <img src="./dist/img/logout.svg">
+	            <img src="./dist/img/log-out.svg">
 	            </a>
             </div>
          </div>

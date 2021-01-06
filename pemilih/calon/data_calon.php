@@ -11,11 +11,13 @@ if ($status==1) { ?>
 		<?php 
 		$sql = $koneksi->query("SELECT * FROM tb_calon");
 		while ($data= $sql->fetch_assoc()) { ?>
-			<div class="kandidat">
-				<img src="foto/<?php echo $data['foto_calon']; ?>" />
-				<div class="no-kandidat"><?php echo $data['id_calon']; ?></div>
-				<a href="?page=PsSQBBK&kode=<?= $data['id_calon']; ?>"><h3><?php echo $data['nama_calon']; ?></h3></a>
-      </div>
+			<a class="ini" href="?page=PsSQBBK&kode=<?= $data['id_calon']; ?>">
+				<div class="kandidat">
+					<img src="foto/<?php echo $data['foto_calon']; ?>" />
+					<div class="no-kandidat"><?php echo $data['id_calon']; ?></div>
+					<h3><?php echo $data['nama_calon']; ?></h3>
+	      </div>
+	    </a>
 		<?php 
 		} ?>
 	</tbody>

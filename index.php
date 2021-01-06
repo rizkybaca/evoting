@@ -29,10 +29,24 @@ if(isset($_GET["page"])){
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" type="text/css" href="./dist/css/style3.css">
+   <script type="text/javascript" src="./plugins/ckeditor/ckeditor.js"></script>
+<!--    <link rel="stylesheet" type="text/css" href="./dist/css/style2.css"> -->
    <link rel="icon" href="./dist/img/voting.svg">
    <title>nge-Vote</title>
+   <script>
+    function refreshpage() {
+      setTimeout(function() {
+        location.reload();
+      }, 3000);
+    }
+  </script>
 </head>
-<body>
+<?php 
+  if ($_SESSION['ses_dump']==="data-suara") {
+    echo '<body onload="refreshpage()">';
+  } else{
+    echo '<body>';
+  } ?>
   <aside>
     <div class="admin">
       <div class="img">
@@ -46,6 +60,7 @@ if(isset($_GET["page"])){
     if ($data_level=="Administrator"){?>
       <div class="navbar">
         <a href="index.php">Home</a>
+        <a href="?page=data-kotak">Vote Box</a>
         <a href="?page=data-suara">Quick Count</a>
         <div class="user-btn">--manage data--</div>
         <div class="user-data">
@@ -100,24 +115,51 @@ if(isset($_GET["page"])){
             include "admin/panitia/data_panitia.php";
             break;
           case 'add-panitia':
-            header("Location: manage-data.php?page=add-panitia");
+            include "admin/panitia/add_panitia.php";
             break;
+          case 'edit-panitia':
+            include "admin/panitia/edit_panitia.php";
+            break;
+          case 'del-panitia':
+            include "admin/panitia/del_panitia.php";
+            break;
+          // case 'add-panitia':
+          //   header("Location: manage-data.php?page=add-panitia");
+          //   break;
 
             //manage data calon
           case 'data-calon':
             include "admin/calon/data_calon.php";
             break;
           case 'add-calon':
-            header("Location: manage-data.php?page=add-calon");
+            include "admin/calon/add_calon.php";
             break;
+          case 'edit-calon':
+            include "admin/calon/edit_calon.php";
+            break;
+          case 'del-calon':
+            include "admin/calon/del_calon.php";
+            break;
+          // case 'add-calon':
+          //   header("Location: manage-data.php?page=add-calon");
+          //   break;
 
             //manage data pemilih
           case 'data-pemilih':
             include "admin/pemilih/data_pemilih.php";
             break;
           case 'add-pemilih':
-            header("Location: manage-data.php?page=add-pemilih");
+            include "admin/pemilih/add_pemilih.php";
             break;
+          case 'edit-pemilih':
+            include "admin/pemilih/edit_pemilih.php";
+            break;
+          case 'del-pemilih':
+            include "admin/pemilih/del_pemilih.php";
+            break;
+          // case 'add-pemilih':
+          //   header("Location: manage-data.php?page=add-pemilih");
+          //   break;
 
             //bilik suara
           case 'PsSQAdT':

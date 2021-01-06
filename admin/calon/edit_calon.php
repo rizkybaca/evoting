@@ -7,7 +7,7 @@ if(isset($_GET['kode'])){
 }
 ?>
 
-<section>
+<section class="satu">
    <form action="" method="POST" enctype="multipart/form-data">
       <div class="input">
 				<label for="no-urut">Nomor Urut</label>
@@ -27,8 +27,8 @@ if(isset($_GET['kode'])){
 				</div>
       </div>
       <div class="btn">
-      	<input type="submit" name="ubah" value="Simpan">
         <a href="?page=data-calon">Batal</a>
+        <input type="submit" name="ubah" value="Simpan">
       </div>
    </form>
 </section>

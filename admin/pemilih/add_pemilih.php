@@ -4,23 +4,23 @@
 
  ?>
 
-<main id="add-data">
+<!-- <main id="add-data"> -->
   <section>
-     <form action="" method="POST">
-        <div class="input">
-          <label for="no-urut">Nama Pemilih</label>
-          <input type="text" name="ini_nama" placeholder="isi nama disini" required>
+    <form action="" method="POST">
+      <div class="input">
+        <label for="no-urut">Nama Pemilih</label>
+        <input type="text" name="ini_nama" placeholder="isi nama disini" required>
 
-          <label for="">Username</label>
-          <input type="text" name="ini_username" placeholder="isi username disini" required>
-        </div>
-        <div class="btn">
-          <input type="submit" name="simpan" value="Tambah">
-          <a href="?page=data-pemilih">Kembali</a>
-        </div>
-     </form>
+        <label for="">Username</label>
+        <input type="text" name="ini_username" placeholder="isi username disini" required>
+      </div>
+      <div class="btn">
+        <a href="?page=data-pemilih">Kembali</a>
+        <input type="submit" name="simpan" value="Tambah">
+      </div>
+    </form>
   </section>
-</main>
+<!-- </main> -->
 
 <?php 
 

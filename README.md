@@ -1,4 +1,4 @@
-# wp-proyek
+# evoting web app
 ngevote - web programming - college projects
 this is my college project for web programming subject, 
 it's a voting app website version,
